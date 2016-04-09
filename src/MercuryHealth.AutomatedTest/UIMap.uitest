@@ -1,0 +1,530 @@
+<?xml version="1.0"?>
+<UITest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="" Id="d9f417f4-03cf-4bea-b94a-510806739ffb" AssemblyVersion="14.0.23107.0" Version="1.0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamTest/UITest/2010">
+  <Configuration>
+    <Group Name="IE">
+      <Setting Name="Version" Value="9.11.9600.18098" WarningLevel="1" />
+      <Setting Name="InformationBar" WarningLevel="1" />
+      <Setting Name="AutoCompletePassword" Value="no" WarningLevel="1" />
+      <Setting Name="AutoCompleteForm" Value="no" WarningLevel="1" />
+      <Setting Name="DefaultBrowser" Value="IEXPLORE.EXE" WarningLevel="1" />
+      <Setting Name="PopupBlocker" Value="yes" WarningLevel="1" />
+      <Setting Name="TabbedBrowsing" WarningLevel="2" />
+      <Setting Name="InternetZoneSecurity" Value="66816" WarningLevel="2" />
+      <Setting Name="IntranetZoneSecurity" Value="69632" WarningLevel="2" />
+      <Setting Name="TrustedZoneSecurity" Value="70912" WarningLevel="2" />
+      <Setting Name="RestrictedZoneSecurity" Value="73728" WarningLevel="2" />
+      <Setting Name="PhishingFilter" WarningLevel="1" />
+      <Setting Name="EnhancedSecurityConfiguration" WarningLevel="1" />
+    </Group>
+    <Group Name="OS">
+      <Setting Name="Name" Value="Microsoft Windows Server 2012 R2 Datacenter" WarningLevel="2" />
+      <Setting Name="Version" Value="Microsoft Windows NT 6.3.9600.0" WarningLevel="2" />
+      <Setting Name="IsUserAdmin" Value="True" WarningLevel="2" />
+      <Setting Name="Is64BitOperatingSystem" Value="True" WarningLevel="2" />
+      <Setting Name="IsTerminalServerSession" Value="True" WarningLevel="2" />
+      <Setting Name="OSLanguage" Value="1033" WarningLevel="1" />
+      <Setting Name="UserLocale" Value="1033" WarningLevel="1" />
+      <Setting Name="DragFullWindows" Value="True" WarningLevel="2" />
+      <Setting Name="ScreenResolutionWidth" Value="1234" WarningLevel="2" />
+      <Setting Name="ScreenResolutionHeight" Value="823" WarningLevel="2" />
+      <Setting Name="SystemDPIX" Value="96" WarningLevel="2" />
+      <Setting Name="SystemDPIY" Value="96" WarningLevel="2" />
+      <Setting Name="Aero" Value="1" WarningLevel="1" />
+      <Setting Name="UACEnabled" Value="1" WarningLevel="2" />
+      <Setting Name="UACPromptEnabled" Value="5" WarningLevel="1" />
+    </Group>
+    <Group Name="TechnologyManagers">
+      <Setting Name="Web" WarningLevel="1" />
+      <Setting Name="Web" WarningLevel="1" />
+      <Setting Name="UIA" WarningLevel="1" />
+    </Group>
+  </Configuration>
+  <InitializeActions />
+  <ExecuteActions>
+    <MouseAction UIObjectName="UIMap.UIMSNcomHotmailOutlookWindow.UIMSNcomHotmailOutlookDocument.UIEbAd32190459_billboaFrame.UIHTML5Billboard88x31tDocument.UICatchAllPane">
+      <ContinueOnError>True</ContinueOnError>
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="1" Y="1" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Hover</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UIMSNcomHotmailOutlookWindow.UIMSNcomHotmailOutlookDocument.UIEbAd32190459_billboaFrame">
+      <ContinueOnError>True</ContinueOnError>
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="1" Y="1" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Hover</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <ErrorAction>
+      <ContinueOnError>True</ContinueOnError>
+      <ParameterName />
+      <Message>Failed to record the object corresponding to this action.</Message>
+    </ErrorAction>
+    <MouseAction UIObjectName="UIMap.UIMSNcomHotmailOutlookWindow.UIMercuryHealthGroupMeDocument.UIMyMetricsHyperlink">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="72" Y="39" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="VerifyMyMetricsPageWorks">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <ErrorAction>
+      <ContinueOnError>True</ContinueOnError>
+      <ParameterName />
+      <Message>Failed to record the object corresponding to this action.</Message>
+    </ErrorAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="CloseTab">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <MouseAction UIObjectName="UIMap.UIMSNcomHotmailOutlookWindow.UIMSNcomHotmailOutlookDocument.UIMainCustom.UIHEALTHFITNESSHyperlink">
+      <ContinueOnError>True</ContinueOnError>
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="1" Y="1" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Hover</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <ErrorAction>
+      <ContinueOnError>True</ContinueOnError>
+      <ParameterName />
+      <Message>Failed to record the object corresponding to this action.</Message>
+    </ErrorAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="OpenBrowser">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <MouseAction UIObjectName="UIMap.UIMSNcomHotmailOutlookWindow.UIMercuryHealthGroupMeDocument.UIMyMetricsHyperlink">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="31" Y="25" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="NavToMyMetricsPage">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <MouseAction UIObjectName="UIMap.UINonstaticmethodrequiWindow.UIFavoritesBarToolBar.UIResourceExplorerButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="3" Y="2" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UINonstaticmethodrequiWindow.UINonstaticmethodrequiDocument.UIItemTable.UIAnunhandledexceptionCell">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="36" Y="14" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="CloseBrowser">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <MouseAction UIObjectName="UIMap.UIMSNcomHotmailOutlookWindow.UIMercuryHealthGroupMeDocument.UIMyMetricsHyperlink">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="53" Y="24" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <TestStepMarkerAction Comment="" MarkerInformation="ClickMyMetrics">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+  </ExecuteActions>
+  <CleanupActions />
+  <OnErrorActions />
+  <Maps>
+    <UIMap Id="UIMap">
+      <TopLevelWindows>
+        <TopLevelWindow ControlType="Window" Id="UIMSNcomHotmailOutlookWindow" FriendlyName="MSN.com - Hotmail, Outlook, Skype, Bing, Latest Ne..." SpecialControlType="BrowserWindow" SessionId="197494">
+          <TechnologyName>MSAA</TechnologyName>
+          <WindowTitles>
+            <WindowTitle>MSN.com - Hotmail, Outlook, Skype, Bing, Latest News, Photos &amp; Videos</WindowTitle>
+            <WindowTitle>Mercury Health - Mercury Health</WindowTitle>
+          </WindowTitles>
+          <SearchConfigurations>
+            <SearchConfiguration>VisibleOnly</SearchConfiguration>
+          </SearchConfigurations>
+          <AndCondition Id="SearchCondition">
+            <PropertyCondition Name="Name">MSN.com - Hotmail, Outlook, Skype, Bing, Latest News, Photos &amp; Videos</PropertyCondition>
+            <PropertyCondition Name="ClassName">IEFrame</PropertyCondition>
+            <PropertyCondition Name="ControlType">Window</PropertyCondition>
+          </AndCondition>
+          <SupportLevel>0</SupportLevel>
+          <Descendants>
+            <UIObject ControlType="Document" Id="UIMSNcomHotmailOutlookDocument" FriendlyName="MSN.com - Hotmail, Outlook, Skype, Bing, Latest Ne..." SpecialControlType="None">
+              <TechnologyName>Web</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>MSN.com - Hotmail, Outlook, Skype, Bing, Latest News, Photos &amp; Videos</WindowTitle>
+              </WindowTitles>
+              <AndCondition Id="SearchCondition">
+                <AndCondition Id="Primary">
+                  <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                  <PropertyCondition Name="TagName">BODY</PropertyCondition>
+                  <PropertyCondition Name="Id" />
+                  <PropertyCondition Name="RedirectingPage">False</PropertyCondition>
+                  <PropertyCondition Name="FrameDocument">False</PropertyCondition>
+                </AndCondition>
+                <FilterCondition Id="Secondary">
+                  <PropertyCondition Name="Title">MSN.com - Hotmail, Outlook, Skype, Bing, Latest News, Photos &amp; Videos</PropertyCondition>
+                  <PropertyCondition Name="AbsolutePath">/</PropertyCondition>
+                  <PropertyCondition Name="PageUrl">http://www.msn.com/?ocid=iehp</PropertyCondition>
+                </FilterCondition>
+              </AndCondition>
+              <SupportLevel>0</SupportLevel>
+              <Descendants>
+                <UIObject ControlType="Frame" Id="UIEbAd32190459_billboaFrame" FriendlyName="ebAd32190459_billboard_iframe_32190459_93048926593..." SpecialControlType="None">
+                  <TechnologyName>Web</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>MSN.com - Hotmail, Outlook, Skype, Bing, Latest News, Photos &amp; Videos</WindowTitle>
+                  </WindowTitles>
+                  <AndCondition Id="SearchCondition">
+                    <AndCondition Id="Primary">
+                      <PropertyCondition Name="ControlType">Frame</PropertyCondition>
+                      <PropertyCondition Name="TagName">IFRAME</PropertyCondition>
+                      <PropertyCondition Name="Id">ebAd32190459_billboard_iframe_32190459_9304892659336474</PropertyCondition>
+                      <PropertyCondition Name="Name" />
+                    </AndCondition>
+                    <FilterCondition Id="Secondary">
+                      <PropertyCondition Name="AbsolutePath">/BurstingRes/Site-43863/WSFolders/4903927_4/panels/billboard/index.html</PropertyCondition>
+                      <PropertyCondition Name="PageUrl">http://msntest.serving-sys.com/BurstingRes/Site-43863/WSFolders/4903927_4/panels/billboard/index.html?v=_2_50_1_0&amp;plu=45</PropertyCondition>
+                      <PropertyCondition Name="Title" />
+                      <PropertyCondition Name="Class" />
+                      <PropertyCondition Name="ControlDefinition">id="ebAd32190459_billboard_iframe_321904</PropertyCondition>
+                      <PropertyCondition Name="TagInstance">1</PropertyCondition>
+                    </FilterCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants>
+                    <UIObject ControlType="Document" Id="UIHTML5Billboard88x31tDocument" FriendlyName="HTML5 Billboard: 88x31 to 970x250" SpecialControlType="None">
+                      <TechnologyName>Web</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>MSN.com - Hotmail, Outlook, Skype, Bing, Latest News, Photos &amp; Videos</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition Id="SearchCondition">
+                        <AndCondition Id="Primary">
+                          <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                          <PropertyCondition Name="TagName">BODY</PropertyCondition>
+                          <PropertyCondition Name="Id" />
+                          <PropertyCondition Name="RedirectingPage">False</PropertyCondition>
+                          <PropertyCondition Name="FrameDocument">True</PropertyCondition>
+                        </AndCondition>
+                        <FilterCondition Id="Secondary">
+                          <PropertyCondition Name="Title">HTML5 Billboard: 88x31 to 970x250</PropertyCondition>
+                          <PropertyCondition Name="AbsolutePath">/BurstingRes/Site-43863/WSFolders/4903927_4/panels/billboard/index.html</PropertyCondition>
+                          <PropertyCondition Name="PageUrl">http://msntest.serving-sys.com/BurstingRes/Site-43863/WSFolders/4903927_4/panels/billboard/index.html?v=_2_50_1_0&amp;plu=45</PropertyCondition>
+                        </FilterCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants>
+                        <UIObject ControlType="Pane" Id="UICatchAllPane" FriendlyName="catchAll" SpecialControlType="None">
+                          <TechnologyName>Web</TechnologyName>
+                          <WindowTitles>
+                            <WindowTitle>MSN.com - Hotmail, Outlook, Skype, Bing, Latest News, Photos &amp; Videos</WindowTitle>
+                          </WindowTitles>
+                          <AndCondition Id="SearchCondition">
+                            <AndCondition Id="Primary">
+                              <PropertyCondition Name="ControlType">Pane</PropertyCondition>
+                              <PropertyCondition Name="TagName">DIV</PropertyCondition>
+                              <PropertyCondition Name="Id">catchAll</PropertyCondition>
+                              <PropertyCondition Name="Name" />
+                            </AndCondition>
+                            <FilterCondition Id="Secondary">
+                              <PropertyCondition Name="InnerText" />
+                              <PropertyCondition Name="Title" />
+                              <PropertyCondition Name="Class" />
+                              <PropertyCondition Name="ControlDefinition">id="catchAll"</PropertyCondition>
+                              <PropertyCondition Name="TagInstance">7</PropertyCondition>
+                            </FilterCondition>
+                          </AndCondition>
+                          <SupportLevel>0</SupportLevel>
+                          <Descendants />
+                        </UIObject>
+                      </Descendants>
+                    </UIObject>
+                  </Descendants>
+                </UIObject>
+                <UIObject ControlType="Custom" Id="UIMainCustom" FriendlyName="main" SpecialControlType="None">
+                  <TechnologyName>Web</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>MSN.com - Hotmail, Outlook, Skype, Bing, Latest News, Photos &amp; Videos</WindowTitle>
+                  </WindowTitles>
+                  <AndCondition Id="SearchCondition">
+                    <AndCondition Id="Primary">
+                      <PropertyCondition Name="ControlType">Custom</PropertyCondition>
+                      <PropertyCondition Name="TagName">main</PropertyCondition>
+                      <PropertyCondition Name="Id">main</PropertyCondition>
+                      <PropertyCondition Name="Name" />
+                    </AndCondition>
+                    <FilterCondition Id="Secondary">
+                      <PropertyCondition Name="Class" />
+                      <PropertyCondition Name="ControlDefinition">id="main" role="main" data-m='{"i":17,"n</PropertyCondition>
+                      <PropertyCondition Name="TagInstance">1</PropertyCondition>
+                    </FilterCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants>
+                    <UIObject ControlType="Hyperlink" Id="UIHEALTHFITNESSHyperlink" FriendlyName="HEALTH &amp; FITNESS" SpecialControlType="None">
+                      <TechnologyName>Web</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>MSN.com - Hotmail, Outlook, Skype, Bing, Latest News, Photos &amp; Videos</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition Id="SearchCondition">
+                        <AndCondition Id="Primary">
+                          <PropertyCondition Name="ControlType">Hyperlink</PropertyCondition>
+                          <PropertyCondition Name="TagName">A</PropertyCondition>
+                          <PropertyCondition Name="Id" />
+                          <PropertyCondition Name="Name" />
+                          <PropertyCondition Name="Target" />
+                          <PropertyCondition Name="InnerText">HEALTH &amp; FITNESS</PropertyCondition>
+                        </AndCondition>
+                        <FilterCondition Id="Secondary">
+                          <PropertyCondition Name="AbsolutePath">/en-us/health</PropertyCondition>
+                          <PropertyCondition Name="Title" />
+                          <PropertyCondition Name="Href">http://www.msn.com/en-us/health</PropertyCondition>
+                          <PropertyCondition Name="Class" />
+                          <PropertyCondition Name="ControlDefinition">href="/en-us/health"</PropertyCondition>
+                          <PropertyCondition Name="TagInstance">50</PropertyCondition>
+                        </FilterCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                  </Descendants>
+                </UIObject>
+              </Descendants>
+            </UIObject>
+            <UIObject ControlType="Document" Id="UIMercuryHealthGroupMeDocument" FriendlyName="Mercury Health Group - Mercury Health" SpecialControlType="None">
+              <TechnologyName>Web</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>Mercury Health - Mercury Health</WindowTitle>
+              </WindowTitles>
+              <AndCondition Id="SearchCondition">
+                <AndCondition Id="Primary">
+                  <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                  <PropertyCondition Name="TagName">BODY</PropertyCondition>
+                  <PropertyCondition Name="Id" />
+                  <PropertyCondition Name="RedirectingPage">False</PropertyCondition>
+                  <PropertyCondition Name="FrameDocument">False</PropertyCondition>
+                </AndCondition>
+                <FilterCondition Id="Secondary">
+                  <PropertyCondition Name="Title">Mercury Health - Mercury Health</PropertyCondition>
+                  <PropertyCondition Name="AbsolutePath">/</PropertyCondition>
+                  <PropertyCondition Name="PageUrl">http://mercuryhealthgrp-qa.azurewebsites.net/</PropertyCondition>
+                </FilterCondition>
+              </AndCondition>
+              <SupportLevel>0</SupportLevel>
+              <Descendants>
+                <UIObject ControlType="Hyperlink" Id="UIMyMetricsHyperlink" FriendlyName="My Metrics" SpecialControlType="None">
+                  <TechnologyName>Web</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>Mercury Health - Mercury Health</WindowTitle>
+                  </WindowTitles>
+                  <AndCondition Id="SearchCondition">
+                    <AndCondition Id="Primary">
+                      <PropertyCondition Name="ControlType">Hyperlink</PropertyCondition>
+                      <PropertyCondition Name="TagName">A</PropertyCondition>
+                      <PropertyCondition Name="Id" />
+                      <PropertyCondition Name="Name" />
+                      <PropertyCondition Name="Target" />
+                      <PropertyCondition Name="InnerText">My Metrics</PropertyCondition>
+                    </AndCondition>
+                    <FilterCondition Id="Secondary">
+                      <PropertyCondition Name="AbsolutePath">/MyMetrics/Calculate</PropertyCondition>
+                      <PropertyCondition Name="Title" />
+                      <PropertyCondition Name="Href">http://mercuryhealthgrp-qa.azurewebsites.net/MyMetrics/Calculate</PropertyCondition>
+                      <PropertyCondition Name="Class" />
+                      <PropertyCondition Name="ControlDefinition">href="/MyMetrics/Calculate"</PropertyCondition>
+                      <PropertyCondition Name="TagInstance">5</PropertyCondition>
+                    </FilterCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants />
+                </UIObject>
+              </Descendants>
+            </UIObject>
+          </Descendants>
+        </TopLevelWindow>
+        <TopLevelWindow ControlType="Window" Id="UINonstaticmethodrequiWindow" FriendlyName="Non-static method requires a target. - Internet Ex..." SpecialControlType="BrowserWindow" SessionId="525216">
+          <TechnologyName>MSAA</TechnologyName>
+          <WindowTitles>
+            <WindowTitle>Non-static method requires a target.</WindowTitle>
+          </WindowTitles>
+          <SearchConfigurations>
+            <SearchConfiguration>VisibleOnly</SearchConfiguration>
+          </SearchConfigurations>
+          <AndCondition Id="SearchCondition">
+            <PropertyCondition Name="Name">Non-static method requires a target.</PropertyCondition>
+            <PropertyCondition Name="ClassName">IEFrame</PropertyCondition>
+            <PropertyCondition Name="ControlType">Window</PropertyCondition>
+          </AndCondition>
+          <SupportLevel>0</SupportLevel>
+          <Descendants>
+            <UIObject ControlType="ToolBar" Id="UIFavoritesBarToolBar" FriendlyName="Favorites Bar" SpecialControlType="None">
+              <TechnologyName>MSAA</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>Non-static method requires a target.</WindowTitle>
+              </WindowTitles>
+              <SearchConfigurations>
+                <SearchConfiguration>VisibleOnly</SearchConfiguration>
+              </SearchConfigurations>
+              <AndCondition Id="SearchCondition">
+                <PropertyCondition Name="Name">Favorites Bar</PropertyCondition>
+                <PropertyCondition Name="ControlType">ToolBar</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>0</SupportLevel>
+              <Descendants>
+                <UIObject ControlType="Button" Id="UIResourceExplorerButton" FriendlyName="Resource Explorer" SpecialControlType="None">
+                  <TechnologyName>MSAA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>Non-static method requires a target.</WindowTitle>
+                  </WindowTitles>
+                  <SearchConfigurations>
+                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                  </SearchConfigurations>
+                  <AndCondition Id="SearchCondition">
+                    <PropertyCondition Name="Name">Resource Explorer</PropertyCondition>
+                    <PropertyCondition Name="ControlType">Button</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants />
+                </UIObject>
+              </Descendants>
+            </UIObject>
+            <UIObject ControlType="Document" Id="UINonstaticmethodrequiDocument" FriendlyName="Non-static method requires a target." SpecialControlType="None">
+              <TechnologyName>Web</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>Non-static method requires a target.</WindowTitle>
+              </WindowTitles>
+              <AndCondition Id="SearchCondition">
+                <AndCondition Id="Primary">
+                  <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                  <PropertyCondition Name="TagName">BODY</PropertyCondition>
+                  <PropertyCondition Name="Id" />
+                  <PropertyCondition Name="RedirectingPage">False</PropertyCondition>
+                  <PropertyCondition Name="FrameDocument">False</PropertyCondition>
+                </AndCondition>
+                <FilterCondition Id="Secondary">
+                  <PropertyCondition Name="Title">Non-static method requires a target.</PropertyCondition>
+                  <PropertyCondition Name="AbsolutePath">/MyMetrics/Calculate</PropertyCondition>
+                  <PropertyCondition Name="PageUrl">http://mercuryhealthgrp-qa.azurewebsites.net/MyMetrics/Calculate</PropertyCondition>
+                </FilterCondition>
+              </AndCondition>
+              <SupportLevel>0</SupportLevel>
+              <Descendants>
+                <UIObject ControlType="Table" Id="UIItemTable" FriendlyName="" SpecialControlType="None">
+                  <TechnologyName>Web</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>Non-static method requires a target.</WindowTitle>
+                  </WindowTitles>
+                  <AndCondition Id="SearchCondition">
+                    <AndCondition Id="Primary">
+                      <PropertyCondition Name="ControlType">Table</PropertyCondition>
+                      <PropertyCondition Name="TagName">TABLE</PropertyCondition>
+                      <PropertyCondition Name="Id" />
+                      <PropertyCondition Name="Name" />
+                    </AndCondition>
+                    <FilterCondition Id="Secondary">
+                      <PropertyCondition Name="InnerText">An unhandled exception was generated dur</PropertyCondition>
+                      <PropertyCondition Name="ControlDefinition">width="100%" bgcolor="#ffffcc"</PropertyCondition>
+                      <PropertyCondition Name="RowCount">1</PropertyCondition>
+                      <PropertyCondition Name="ColumnCount">1</PropertyCondition>
+                      <PropertyCondition Name="Class" />
+                      <PropertyCondition Name="TagInstance">1</PropertyCondition>
+                    </FilterCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants>
+                    <UIObject ControlType="Cell" Id="UIAnunhandledexceptionCell" FriendlyName="An unhandled exception was generated dur" SpecialControlType="None">
+                      <TechnologyName>Web</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Non-static method requires a target.</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition Id="SearchCondition">
+                        <AndCondition Id="Primary">
+                          <PropertyCondition Name="ControlType">Cell</PropertyCondition>
+                          <PropertyCondition Name="TagName">TD</PropertyCondition>
+                          <PropertyCondition Name="Id" />
+                          <PropertyCondition Name="Name" />
+                          <PropertyCondition Name="MaxDepth">3</PropertyCondition>
+                          <PropertyCondition Name="InnerText">An unhandled exception was generated dur</PropertyCondition>
+                        </AndCondition>
+                        <FilterCondition Id="Secondary">
+                          <PropertyCondition Name="ControlDefinition" />
+                          <PropertyCondition Name="RowIndex">0</PropertyCondition>
+                          <PropertyCondition Name="ColumnIndex">0</PropertyCondition>
+                          <PropertyCondition Name="Class" />
+                          <PropertyCondition Name="TagInstance">1</PropertyCondition>
+                        </FilterCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                  </Descendants>
+                </UIObject>
+              </Descendants>
+            </UIObject>
+          </Descendants>
+        </TopLevelWindow>
+      </TopLevelWindows>
+    </UIMap>
+  </Maps>
+  <ValueMap>
+    <ParameterList />
+  </ValueMap>
+</UITest>
