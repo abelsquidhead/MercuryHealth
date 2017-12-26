@@ -61,13 +61,13 @@ namespace MercuryHealth.Web.Controllers
                 Quantity = 1,
                 Description = "Apple",
                 //MealTime = DateTime.UtcNow,
-                MealTime = Convert.ToDateTime("8/25/2105"),
+                MealTime = new DateTime(2105, 8, 25),
                 Calories = 116,
                 Tags = "fruit, snack",
-                ProteinInGrams = Convert.ToDecimal("0.6"),
-                FatInGrams = Convert.ToDecimal("0.4"),
-                CarbohydratesInGrams = Convert.ToDecimal("38.8"),
-                SodiumInGrams = Convert.ToDecimal("2.0")
+                ProteinInGrams = 0.6M,
+                FatInGrams = 0.4M,
+                CarbohydratesInGrams = 38.8M,
+                SodiumInGrams = 2.0M
             };
 
             return View(query);

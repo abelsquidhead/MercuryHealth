@@ -5,122 +5,15 @@ using System.Web.Mvc;
 using MercuryHealth.Models;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using Microsoft.QualityTools.Testing.Fakes;
 using MercuryHealth.Web.Models.Fakes;
 using System.Web.Mvc.Fakes;
-using Microsoft.ApplicationInsights;
 
 namespace MercuryHealth.UnitTest
 {
     [TestClass]
-    public class UnitTests
+    public class FoodLogEntriesControllerTests
     {
-        [TestMethod]
-        [TestCategory("Unit Tests")]
-        public void HomeIndex()
-        {
-            var homeController = new HomeController();
-            ViewResult result = homeController.Index() as ViewResult;
-            var viewName = result.ViewName;
-
-            // checking that homecontroller.index goes to the page
-            Assert.AreEqual("", viewName);
-
-        }
-
-        [TestMethod]
-        [TestCategory("Unit Tests")]
-        public void HomeAbout()
-        {
-            var homeController = new HomeController();
-            ViewResult result = homeController.About() as ViewResult;
-            var viewName = result.ViewName;
-
-            // checking that homecontroller.index goes to the page
-            Assert.AreEqual("", viewName);
-
-        }
-
-        [TestMethod]
-        [TestCategory("Unit Tests")]
-        public void HomeContact()
-        {
-            var homeController = new HomeController();
-            ViewResult result = homeController.Contact() as ViewResult;
-            var viewName = result.ViewName;
-
-            // checking that homecontroller.index goes to the page
-            Assert.AreEqual("", viewName);
-
-        }
-
-        [TestMethod]
-        [TestCategory("Unit Tests")]
-        public void HomeExercises()
-        {
-            var homeController = new HomeController();
-            ViewResult result = homeController.Contact() as ViewResult;
-            var viewName = result.ViewName;
-
-            // checking that homecontroller.index goes to the page
-            Assert.AreEqual("", viewName);
-
-        }
-
-
-        [TestMethod]
-        [TestCategory("Unit Tests")]
-        public void HomeNutrition()
-        {
-            var homeController = new HomeController();
-            ViewResult result = homeController.Contact() as ViewResult;
-            var viewName = result.ViewName;
-
-            // checking that homecontroller.index goes to the page
-            Assert.AreEqual("", viewName);
-
-        }
-
-        [TestMethod]
-        [TestCategory("Unit Tests")]
-        public void HomeRegister()
-        {
-            var homeController = new HomeController();
-            ViewResult result = homeController.Contact() as ViewResult;
-            var viewName = result.ViewName;
-
-            // checking that homecontroller.index goes to the page
-            Assert.AreEqual("", viewName);
-
-        }
-
-        [TestMethod]
-        [TestCategory("Unit Tests")]
-        public void HomeLogin()
-        {
-            var homeController = new HomeController();
-            ViewResult result = homeController.Contact() as ViewResult;
-            var viewName = result.ViewName;
-
-            // checking that homecontroller.index goes to the page
-            Assert.AreEqual("", viewName);
-
-        }
-
-        [TestMethod]
-        [TestCategory("Unit Tests")]
-        public void HomeMyMetrics()
-        {
-            var homeController = new HomeController();
-            ViewResult result = homeController.Contact() as ViewResult;
-            var viewName = result.ViewName;
-
-            // checking that homecontroller.index goes to the page
-            Assert.AreEqual("", viewName);
-
-        }
-
         [TestMethod]
         [TestCategory("Unit Tests")]
         public void DisplayFoodLogEntryDetailsTest()
@@ -207,13 +100,13 @@ namespace MercuryHealth.UnitTest
             Assert.AreEqual(1, viewModel.Quantity);
 
             Assert.AreEqual("Apple", viewModel.Description);
-            Assert.AreEqual(Convert.ToDateTime("8/25/2105"), viewModel.MealTime);
+            Assert.AreEqual(new DateTime(2105,8,25), viewModel.MealTime);
             Assert.AreEqual(116, viewModel.Calories);
             Assert.AreEqual("fruit, snack", viewModel.Tags);
-            Assert.AreEqual(Convert.ToDecimal("0.6"), viewModel.ProteinInGrams);
-            Assert.AreEqual(Convert.ToDecimal("0.4"), viewModel.FatInGrams);
-            Assert.AreEqual(Convert.ToDecimal("38.8"), viewModel.CarbohydratesInGrams);
-            Assert.AreEqual(Convert.ToDecimal("2.0"), viewModel.SodiumInGrams);
+            Assert.AreEqual(0.6M, viewModel.ProteinInGrams);
+            Assert.AreEqual(0.4M, viewModel.FatInGrams);
+            Assert.AreEqual(38.8M, viewModel.CarbohydratesInGrams);
+            Assert.AreEqual(2.0M, viewModel.SodiumInGrams);
         }
 
         [TestMethod]
