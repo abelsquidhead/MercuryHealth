@@ -70,7 +70,6 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="CodedUITest.VerifyMyMetricsPage.cs" />
     <Compile Include="MercuryHealthAppTests.cs" />
     <Compile Include="Pages\BasePage.cs" />
     <Compile Include="Pages\CreatePage.cs" />
@@ -83,12 +82,6 @@
     <Compile Include="Pages\MyMetricsPage.cs" />
     <Compile Include="Pages\NutritionPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UIMap.cs">
-      <DependentUpon>UIMap.uitest</DependentUpon>
-    </Compile>
-    <Compile Include="UIMap.Designer.cs">
-      <DependentUpon>UIMap.uitest</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="scripts\" />
@@ -103,7 +96,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
-    <None Include="UIMap.uitest" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\packages\PhantomJS.2.0.0\tools\phantomjs\phantomjs.exe">
