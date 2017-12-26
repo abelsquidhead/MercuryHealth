@@ -91,10 +91,15 @@ namespace MercuryHealth.AutomatedTest.Pages
             {
                 driver = new ChromeDriver();
             }
+            else if (browser.Equals("chromeheadless"))
+            {
+                var chromeOptions = new ChromeOptions();
+                chromeOptions.AddArgument("--headless");
+                driver = new ChromeDriver(chromeOptions);
+            }
             else if (browser.Equals("phantomjs"))
             {
                 driver = new PhantomJSDriver();
-
             }
             else
             {
