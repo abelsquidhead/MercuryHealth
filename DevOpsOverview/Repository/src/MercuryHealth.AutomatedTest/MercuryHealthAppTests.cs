@@ -12,40 +12,36 @@ namespace MercuryHealth.AutomatedTest
         private static HomePage _homePage;
         private static string _browserType;
 
-        public MercuryHealthAppTests()
+        #region helpers
+        private static string GetConfigurationValue(TestContext context, string key)
         {
-            var configFile = AppDomain.CurrentDomain.SetupInformation.ConfigurationFile;
-
-            _browserType = ConfigurationManager.AppSettings["browserType"];
-            _homePageUrl = ConfigurationManager.AppSettings["appUrl"];
-
-
-            System.Console.WriteLine("Url: " + _homePageUrl);
-            System.Console.WriteLine("Browser type: " + _browserType);
-            System.Console.WriteLine("config file: " + configFile);
+            if (context.Properties.Contains(key))
+            {
+                return context.Properties[key].ToString();
+            }
+            else
+            {
+                return ConfigurationManager.AppSettings[key];
+            }
         }
+        #endregion
 
         #region Setup and teardown
         [ClassInitialize]
 
         public static void Initialize(TestContext context)
         {
-            _browserType = ConfigurationManager.AppSettings["browserType"];
-            _homePageUrl = ConfigurationManager.AppSettings["appUrl"];
+            _browserType = GetConfigurationValue(context, "browserType");
+            _homePageUrl = GetConfigurationValue(context, "appUrl");
+
+            var browserExecutableLocation = GetConfigurationValue(context, "browserExeLocation");
 
 
             System.Console.WriteLine("Url: " + _homePageUrl);
             System.Console.WriteLine("Browser type: " + _browserType);
+            System.Console.WriteLine("Browser location: " + browserExecutableLocation);
 
-            //_homePage = HomePage.Launch(_browserType);
-            _homePage = HomePage.Launch(_homePageUrl, _browserType);
-
-            //
-            //_homePage = HomePage.Launch(_homePageUrl, "chrome");
-            //_homePage = HomePage.Launch(_homePageUrl, "IE");
-            // PhantomJS is a headless WebKit scriptable witha JavaScript API.
-            // uncomment for headless tests
-            //_homePage = HomePage.Launch(_homePageUrl, "phantomjs");
+            _homePage = HomePage.Launch(_homePageUrl, _browserType, browserExecutableLocation);
         }
 
         [ClassCleanup]

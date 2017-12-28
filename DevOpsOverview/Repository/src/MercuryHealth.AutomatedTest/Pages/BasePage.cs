@@ -81,7 +81,7 @@ namespace MercuryHealth.AutomatedTest.Pages
 
         #region Launch selenium web driver
         //public static HomePage Launch(string homePageUrl, string browser = "ie")
-        public static HomePage Launch(string homePageUrl, string browser)
+        public static HomePage Launch(string homePageUrl, string browser, string browserExecutableLocation)
         {
             // based on the browser passed in, created your web driver
             IWebDriver driver;
@@ -93,6 +93,12 @@ namespace MercuryHealth.AutomatedTest.Pages
                 {
                     chromeOptions.AddArgument("--headless");
                 }
+
+                if(!String.IsNullOrEmpty(browserExecutableLocation))
+                {
+                    chromeOptions.BinaryLocation = browserExecutableLocation;
+                }
+
                 driver = new ChromeDriver(chromeOptions);
             }
             else if (browser.StartsWith("firefox"))
@@ -104,6 +110,11 @@ namespace MercuryHealth.AutomatedTest.Pages
                     firefoxOptions.AddArgument("--headless");
                 }
 
+                if (!String.IsNullOrEmpty(browserExecutableLocation))
+                {
+                    firefoxOptions.BrowserExecutableLocation = browserExecutableLocation;
+                }
+                
                 driver = new FirefoxDriver(firefoxOptions);
             }
             else if (browser.StartsWith("edge"))
