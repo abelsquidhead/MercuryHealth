@@ -1,14 +1,12 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
+using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.PhantomJS;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MercuryHealth.AutomatedTest.Pages
 {
@@ -43,7 +41,7 @@ namespace MercuryHealth.AutomatedTest.Pages
                 var nutritionLink = _driver.FindElement(By.LinkText("Nutrition"));
                 nutritionLink.Click();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Assert.Fail("Could not find nutrition link: " + e.Message);
             }
@@ -83,22 +81,59 @@ namespace MercuryHealth.AutomatedTest.Pages
 
         #region Launch selenium web driver
         //public static HomePage Launch(string homePageUrl, string browser = "ie")
-        public static HomePage Launch(string homePageUrl, string browser)
+        public static HomePage Launch(string homePageUrl, string browser, string browserExecutableLocation)
         {
             // based on the browser passed in, created your web driver
             IWebDriver driver;
-            if (browser.Equals("chrome"))
+            if (browser.StartsWith("chrome"))
             {
-                driver = new ChromeDriver();
+                var chromeOptions = new ChromeOptions();
+
+                if (browser.EndsWith("headless"))
+                {
+                    chromeOptions.AddArgument("--headless");
+                }
+
+                if(!String.IsNullOrEmpty(browserExecutableLocation))
+                {
+                    chromeOptions.BinaryLocation = browserExecutableLocation;
+                }
+
+                driver = new ChromeDriver(chromeOptions);
             }
+            else if (browser.StartsWith("firefox"))
+            {
+                var firefoxOptions = new FirefoxOptions();
+
+                if (browser.EndsWith("headless"))
+                {
+                    firefoxOptions.AddArgument("--headless");
+                }
+
+                if (!String.IsNullOrEmpty(browserExecutableLocation))
+                {
+                    firefoxOptions.BrowserExecutableLocation = browserExecutableLocation;
+                }
+                
+                driver = new FirefoxDriver(firefoxOptions);
+            }
+            else if (browser.StartsWith("edge"))
+            {
+                var edgeOptions = new EdgeOptions();
+
+                driver = new EdgeDriver(edgeOptions);
+            }
+
             else if (browser.Equals("phantomjs"))
             {
                 driver = new PhantomJSDriver();
-
             }
             else
             {
-                driver = new InternetExplorerDriver();
+                var ieOptions = new InternetExplorerOptions();
+                ieOptions.IgnoreZoomLevel = true;
+
+                driver = new InternetExplorerDriver(ieOptions);
             }
 
             // set the window size of the browser and browse to the home page

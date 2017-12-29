@@ -128,8 +128,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="HealthCalculatorTests.cs" />
-    <Compile Include="UnitTests.cs" />
+    <Compile Include="UserRepositoryTests.cs" />
+    <Compile Include="FoodLogEntriesControllerTests.cs" />
+    <Compile Include="HomeControllerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
