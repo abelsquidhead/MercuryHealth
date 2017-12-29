@@ -1,0 +1,72 @@
+variables:
+  BuildConfiguration : "release"
+  BuildPlatform : "any cpu"
+
+queue:
+  name: Hosted VS2017
+  demands: 
+    - msbuild
+    - visualstudio
+    - vstest
+
+steps:
+
+- task: NuGetToolInstaller@0
+  displayName: "use latest nuget"
+
+- task: NuGetCommand@2
+  displayName: "NuGet restore"
+  inputs:
+    restoreSolution: "**\\*.sln"
+
+- task: VSBuild@1
+  displayName: "Build Solution"
+  inputs:
+    solution: "**\\*.sln"
+    msbuildArgs: "/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation=\"$(build.artifactstagingdirectory)\\packages\""
+    platform: "$(BuildPlatform)"
+    configuration: "$(BuildConfiguration)"
+
+- task: VSTest@2
+  displayName: "Run Tests"
+  inputs:
+    testAssemblyVer2: "**\\$(BuildConfiguration)\\*test*.dll
+  !**\\obj\\**"
+    testFiltercriteria: "TestCategory=Unit Tests"
+    platform: "$(BuildPlatform)"
+    configuration: "$(BuildConfiguration)"
+
+- task: CopyFiles@2
+  displayName: "Copy files to staging directory"
+  inputs:
+    SourceFolder: "$(build.sourcesdirectory)\\DevOpsOverview\\Repository\\src"
+    Contents: "**\\bin\\$(BuildConfiguration)\\**"
+    TargetFolder: "$(build.artifactstagingdirectory)"
+
+- task: PublishBuildArtifacts@1
+  displayName: "Publish LoadTest"
+  inputs:
+    PathtoPublish: "$(build.artifactstagingdirectory)\\MercuryHealth.LoadTests\\bin\\$(BuildConfiguration)"
+    ArtifactName: "LoadTest"
+    ArtifactType: "Container"
+
+- task: PublishBuildArtifacts@1
+  displayName: "Publish webdeploy package"
+  inputs:
+    PathtoPublish: "$(build.artifactstagingdirectory)\\packages"
+    ArtifactName: "packages"
+    ArtifactType: "Container"
+
+- task: PublishBuildArtifacts@1
+  displayName: "Publish Databaset"
+  inputs:
+    PathtoPublish: "$(build.artifactstagingdirectory)\\MercuryHealth.Sql\\bin\\$(BuildConfiguration)"
+    ArtifactName: "Database"
+    ArtifactType: "Container"
+
+- task: PublishBuildArtifacts@1
+  displayName: "Publish UITests"
+  inputs:
+    PathtoPublish: "$(build.artifactstagingdirectory)\\MercuryHealth.AutomatedTest\\bin\\$(BuildConfiguration)"
+    ArtifactName: "UITests"
+    ArtifactType: "Container"
