@@ -103,20 +103,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\packages\PhantomJS.2.0.0\tools\phantomjs\phantomjs.exe">
-      <Link>WebDrivers\phantomjs.exe</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Link>phantomjs.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\packages\Selenium.Firefox.WebDriver.0.19.1\driver\geckodriver.exe">
-      <Link>WebDrivers\\geckodriver.exe</Link>
+      <Link>\geckodriver.exe</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\packages\Selenium.WebDriver.MicrosoftDriver.16.16299.0\driver\MicrosoftWebDriver.exe">
-      <Link>WebDrivers\MicrosoftWebDriver.exe</Link>
+      <Link>MicrosoftWebDriver.exe</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="WebDrivers\phantomjs-license.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="phantomjs-license.txt" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

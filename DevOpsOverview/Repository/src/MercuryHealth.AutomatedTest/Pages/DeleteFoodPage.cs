@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using System;
 
 namespace MercuryHealth.AutomatedTest.Pages
@@ -16,7 +17,11 @@ namespace MercuryHealth.AutomatedTest.Pages
         {
             try
             {
-                var deleteButton = _driver.FindElement(By.ClassName("btn"));
+                //var deleteButton = wait.Until(webdriver => webdriver.FindElement(By.ClassName("btn")));
+
+                //var deleteButton = _driver.FindElement(By.ClassName("btn"));
+
+                var deleteButton = WaitForElement(By.ClassName("btn"));
                 deleteButton.Click();
             }
             catch(Exception e)
