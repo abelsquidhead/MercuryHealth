@@ -16,9 +16,9 @@ namespace MercuryHealth.AutomatedTest.Pages
         {
             try
             {
-                var homePageTitleElement = _driver.FindElement(By.Id("HomePageTitle"));
+                var homePageTitleElement = WaitForElement(By.Id("HomePageTitle"));
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Assert.Fail("Home page was not reached, could not find home page title: " + e.Message);
             }

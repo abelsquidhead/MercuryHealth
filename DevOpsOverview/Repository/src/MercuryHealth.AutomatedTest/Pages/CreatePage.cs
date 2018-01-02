@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using System;
 
 namespace MercuryHealth.AutomatedTest.Pages
@@ -17,7 +18,9 @@ namespace MercuryHealth.AutomatedTest.Pages
         {
             try
             {
-                var descriptionField = _driver.FindElement(By.Id("Description"));
+                var descriptionField = WaitForElement(By.Id("Description"));
+
+                //var descriptionField = _driver.FindElement(By.Id("Description"));
                 descriptionField.Clear();
                 descriptionField.SendKeys(descr);
             }

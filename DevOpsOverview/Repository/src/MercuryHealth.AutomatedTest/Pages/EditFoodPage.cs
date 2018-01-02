@@ -48,7 +48,9 @@ namespace MercuryHealth.AutomatedTest.Pages
         {
             try
             {
-                var editHeader = _driver.FindElement(By.TagName("h2"));
+                WaitForPageLoad();
+
+                var editHeader = WaitForElement(By.TagName("h2"));
                 Assert.AreEqual("Edit", editHeader.Text, "page header is not Edit");
             }
             catch(Exception e)

@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Linq;
 
@@ -17,8 +18,8 @@ namespace MercuryHealth.AutomatedTest.Pages
         {
             try
             {
-                //var createNewLink = _driver.FindElement(By.LinkText("Create New"));
-                var createNewLink = _driver.FindElement(By.Id("CreateNew"));
+                var createNewLink = WaitForElement(By.Id("CreateNew"));
+                //var createNewLink = _driver.FindElement(By.Id("CreateNew"));
                 createNewLink.Click();
             }
             catch(Exception e)
@@ -86,7 +87,6 @@ namespace MercuryHealth.AutomatedTest.Pages
             catch (Exception e)
             {
                 Assert.Fail("Could not delete food: " + e.Message);
-
             }
             
             return this;
@@ -129,9 +129,9 @@ namespace MercuryHealth.AutomatedTest.Pages
         {
             try
             {
-                //var createNewLink = _driver.FindElement(By.XPath("/html/body/div[2]/p/a"));
-                //var createNewLink = _driver.FindElement(By.LinkText("Create New"));
-                var createNewLink = _driver.FindElement(By.Id("CreateNew"));
+                var createNewLink = WaitForElement(By.Id("CreateNew"));
+
+                //var createNewLink = _driver.FindElement(By.Id("CreateNew"));
             }
             catch (Exception e)
             {
@@ -191,7 +191,7 @@ namespace MercuryHealth.AutomatedTest.Pages
                 {
                     var dataElements = foodRow.FindElements(By.TagName("td"));
                     var carbElement = dataElements[7];
-                    Assert.AreEqual(carbs, carbElement.Text, "Carb value is wrong.");
+                    Assert.AreEqual(carbs, carbElement.Text.Trim(), "Carb value is wrong.");
                     
                 }
             }

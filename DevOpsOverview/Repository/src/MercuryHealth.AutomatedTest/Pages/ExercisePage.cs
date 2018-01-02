@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Linq;
 
@@ -132,9 +133,9 @@ namespace MercuryHealth.AutomatedTest.Pages
         {
             try
             {
-                //var createNewLink = _driver.FindElement(By.XPath("/html/body/div[2]/p/a"));
-                //var createNewLink = _driver.FindElement(By.LinkText("Create New"));
-                var createNewLink = _driver.FindElement(By.Id("CreateNew"));
+                WaitForElement(By.Id("CreateNew"));
+
+                //var createNewLink = _driver.FindElement(By.Id("CreateNew"));
             }
             catch (Exception e)
             {

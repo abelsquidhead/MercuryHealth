@@ -7,6 +7,7 @@ using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.PhantomJS;
 using System;
 using System.Drawing;
+using OpenQA.Selenium.Support.UI;
 
 namespace MercuryHealth.AutomatedTest.Pages
 {
@@ -18,6 +19,29 @@ namespace MercuryHealth.AutomatedTest.Pages
         {
 
         }
+
+        #region helpers
+        protected IWebElement WaitForElement(By by)
+        {
+            var clock = new SystemClock();
+            var totalWaitTimeout = new TimeSpan(0, 0, 10);
+            var waitInterval = new TimeSpan(0, 0, 0, 0, 50);
+            var wait = new WebDriverWait(clock, _driver, totalWaitTimeout, waitInterval);
+
+            return wait.Until(webdriver => webdriver.FindElement(by));
+        }
+
+        protected void WaitForPageLoad()
+        {
+            var clock = new SystemClock();
+            var totalWaitTimeout = new TimeSpan(0, 0, 10);
+            var waitInterval = new TimeSpan(0, 0, 0, 0, 50);
+            var wait = new WebDriverWait(clock, _driver, totalWaitTimeout, waitInterval);
+
+            wait.Until(webDriver => ((IJavaScriptExecutor)webDriver).ExecuteScript("return document.readyState").Equals("complete"));
+        }
+
+        #endregion
 
 
         #region Actions
@@ -137,7 +161,7 @@ namespace MercuryHealth.AutomatedTest.Pages
             }
 
             // set the window size of the browser and browse to the home page
-            driver.Manage().Window.Size = new Size(1366, 768);
+            driver.Manage().Window.Size = new Size(1920, 1080);
             driver.Navigate().GoToUrl(homePageUrl);
             return new HomePage(driver);
         }
